@@ -13,7 +13,7 @@ pipeline {
             steps {
                 script {
                     // Build and test API
-                    sh 'pip install -r requirements.txt' // Install dependencies
+                    sh 'sudo apt install python3--r requirements.txt' // Install dependencies
                     sh 'python3 app.py &'
                     sh 'sleep 5' // Wait for API to start
 
