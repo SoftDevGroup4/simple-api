@@ -1,0 +1,6 @@
+services:
+  web:
+    container_name: api
+    image: cicd/sdp:lastest
+    ports:
+      - "5000:5000"
