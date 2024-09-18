@@ -3,6 +3,12 @@ pipeline {
         label 'test'
     }
     stages {
+        stage('Clone simple-api repository') {
+            steps {
+                git url: 'https://github.com/SoftDevGroup4/simple-api.git', branch: 'testPipeline'
+            }
+        }
+
         stage('Build and Test API') {
             steps {
                 script {
@@ -21,12 +27,13 @@ pipeline {
             steps {
                 script {
                     dir('./robot3/') {
-                        git branch: 'main', credentialsId:'b6e295a8-1e05-4bf3-aa88-ee540cc4c56b', url: 'https://gitlab.com/sdp2092409/robot.git'
+                        git url: 'https://github.com/SoftDevGroup4/simple-api-robot.git', branch: 'main'
                     }
                     sh 'cd ./robot3 && robot test_robot.robot'
                 }
             }
         }
+
         // #build image
         stage('Build and Push Docker Image') {
             steps {
