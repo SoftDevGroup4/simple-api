@@ -40,7 +40,7 @@ pipeline {
                 script {
                     withCredentials([string(credentialsId: 'DOCKER_TOKEN', variable: 'DOCKER_TOKEN')]) {
                         // Perform Docker login using the token
-                        sh 'echo $DOCKER_TOKEN | docker login -u baitoeykp --password-stdin'
+                        sh 'echo $DOCKER_TOKEN | docker login -u $DOCKER_USERNAME --password-stdin'
 
                         // Build and push the Docker image
                         sh 'docker build -t cicd/sdp:lastest .'
