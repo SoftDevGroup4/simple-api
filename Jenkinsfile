@@ -4,14 +4,14 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                script {
-                    // Checkout code from the provided GitHub repository
-                    checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/Modr3d/api_unittest.git']]])
-                }
-            }
-        }
+        // stage('Checkout') {
+        //     steps {
+        //         script {
+        //             // Checkout code from the provided GitHub repository
+        //             checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/Modr3d/api_unittest.git']]])
+        //         }
+        //     }
+        // }
 
         stage('Build and Test API') {
             steps {
