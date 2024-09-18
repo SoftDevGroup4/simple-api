@@ -6,13 +6,13 @@ app = Flask(__name__)
 @app.route("/")
 def index():
 
-    return "Index!nutt555updateNewnewwhelloWorld"
+    return "Index!nutt555updateNe555"
 
 
 
 @app.route("/getcode", methods=["GET"])
 def getcode():
-    return "getcode"
+    return "getcode_"
 
 
 @app.route("/plus/<num1>/<num2>", methods=["GET"])
