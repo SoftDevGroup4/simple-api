@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "HELLO WORLD"
+    return "123"
 
 
 @app.route("/getcode", methods=["GET"])
