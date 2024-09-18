@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Clone simple-api repository') {
             steps {
-                git url: 'https://github.com/SoftDevGroup4/simple-api.git', branch: 'BT_pipeline'
+                git url: 'https://github.com/SoftDevGroup4/simple-api.git', branch: 'main'
             }
         }
 
