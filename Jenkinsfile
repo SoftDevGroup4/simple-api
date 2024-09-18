@@ -38,9 +38,14 @@ pipeline {
         stage('Build and Push Docker Image') {
             steps {
                 script {
-                    sh'docker login'
-                    sh 'docker build -t cicd/sdp:lastest .'
-                    sh 'docker push cicd/sdp:lastest'
+                    withCredentials([string(credentialsId: 'DOCKER_TOKEN', variable: 'DOCKER_TOKEN')]) {
+                        // Perform Docker login using the token
+                        sh 'echo $DOCKER_TOKEN | docker login -u baitoeykp --password-stdin'
+
+                        // Build and push the Docker image
+                        sh 'docker build -t cicd/sdp:lastest .'
+                        sh 'docker push cicd/sdp:lastest'
+                    }
                 }
             }
         }
