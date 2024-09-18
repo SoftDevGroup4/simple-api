@@ -39,8 +39,8 @@ pipeline {
             steps {
                 script {
                     sh 'docker login'
-                    sh 'docker build -t cicd/sdp:lastest .'
-                    sh 'docker push cicd/sdp:lastest'
+                    sh 'docker build -t baitoeykp/cicd:lastest .'
+                    sh 'docker push baitoeykp/cicd:lastest'
                 }
             }
         }
