@@ -13,8 +13,6 @@ pipeline {
             steps {
                 script {
                     // Build and test API
-                    sh 'wget https://bootstrap.pypa.io/get-pip.py'
-                    sh 'python3 get-pip.py'
                     sh 'pip install -r requirements.txt ' // Install dependencies
                     sh 'python3 app.py &'
                     sh 'sleep 5' // Wait for API to start
