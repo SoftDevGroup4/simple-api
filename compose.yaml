@@ -4,7 +4,3 @@ services:
     image: cicd/sdp:lastest
     ports:
       - "5000:5000"
-  app:
-    environment:
-      - DOCKER_USERNAME=${DOCKER_USERNAME}
-      - DOCKER_TOKEN=${DOCKER_TOKEN}

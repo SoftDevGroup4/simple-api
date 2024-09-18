@@ -38,12 +38,13 @@ pipeline {
         stage('Build and Push Docker Image') {
             steps {
                 script {
-                    sh'docker login'
+                    sh 'docker login'
                     sh 'docker build -t cicd/sdp:lastest .'
                     sh 'docker push cicd/sdp:lastest'
                 }
             }
         }
+
         stage('Clean Workspace') {
             steps {
                 sh 'docker compose down'
