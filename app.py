@@ -5,12 +5,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return "Index!nutt555updateNew"
+    return "Index"
 
 
 @app.route("/getcode", methods=["GET"])
 def getcode():
-    return "getcode_"
+    return "getcode"
 
 
 @app.route("/plus/<num1>/<num2>", methods=["GET"])
