@@ -3,4 +3,4 @@ services:
     container_name: api
     image: baitoeykp/cicd:lastest
     ports:
-      - "5001:5000"
+      - "5001:5000" #out:in
