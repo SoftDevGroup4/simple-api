@@ -25,20 +25,18 @@ def calculate(num1, num2):
 
     return results
 
+
 @app.route("/is_prime/<num>", methods=["GET"])
 def is_prime(num):
     try:
         num = int(num)
-        
+
         for i in range(2, num):
-            if num % i == 0: # not prime
+            if num % i == 0:  # not prime
                 return "False"
-        return "True"        
+        return "True"
     except:
         return {"error_msg": "inputs must be numbers"}
-        
-    
-
 
 
 if __name__ == "__main__":
