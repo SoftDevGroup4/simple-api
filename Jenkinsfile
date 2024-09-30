@@ -39,9 +39,11 @@ pipeline {
         stage('Build and Push Docker Image') {
             steps {
                 script {
-                    sh 'docker login'
-                    sh 'docker build -t baitoeykp/cicd:lastest .' //build image dockerhubUser/imageName:version (Dockerfile)
-                    sh 'docker push baitoeykp/cicd:lastest' // push to docker hub
+                    // Build the image and tag it with GitHub Container Registry URL
+                    sh 'docker build -t ghcr.io/BaitoeyKP/simple-api/cicd:latest .'
+
+                    // Push the image to GitHub Container Registry
+                    sh 'docker push ghcr.io/BaitoeyKP/simple-api/cicd:latest'
                 }
             }
         }
