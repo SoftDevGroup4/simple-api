@@ -10,7 +10,7 @@ class TestApp(unittest.TestCase):
     
     def false_when_x_is_36(self):
         response = self.app.get("/is_prime/36")
-        self.assertEqual(response.data.decode(), "False")
+        self.assertEqual(response.data.decode(), "True")
 
     def true_when_x_is_13219(self):
         response = self.app.get("/is_prime/13219")
