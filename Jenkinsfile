@@ -40,10 +40,10 @@ pipeline {
             steps {
                 script {
                     // Build the image and tag it with GitHub Container Registry URL
-                    sh 'docker build -t ghcr.io/BaitoeyKP/jenkins/cicd:latest .'
+                    sh 'docker build -t ghcr.io/baitoeykp/jenkins/cicd:latest .'
 
                     // Push the image to GitHub Container Registry
-                    sh 'docker push ghcr.io/BaitoeyKP/jenkins/cicd:latest'
+                    sh 'docker push ghcr.io/baitoeykp/jenkins/cicd:latest'
                 }
             }
         }
