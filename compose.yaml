@@ -1,6 +1,6 @@
 services:
   web:
     container_name: api
-    image: baitoeykp/cicd:latest
+    image: baitoeykp/jenkins/cicd:latest
     ports:
       - "5001:5000" #out:in
