@@ -47,6 +47,20 @@ def is_even(num):
         return "False"
     except:
         return {"error_msg": "inputs must be numbers"}
+    
+@app.route("/is_grade/<num>", methods=["GET"])
+def is_grade(num):
+    try:
+        num = float(num)
+        if num>3.5:  
+            return "1st"
+        elif num>=3.25 and num<=3.5:  
+            return "2nd"
+        else:
+            return "other"
+    except:
+        return {"error_msg": "inputs must be numbers"}
+
 
 
 if __name__ == "__main__":
