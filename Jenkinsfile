@@ -39,7 +39,7 @@ pipeline {
         stage('Build and Push Docker Image') {
             steps {
                 script {
-                    sh 'docker login'
+                    // sh 'docker login'
                     // Build the image and tag it with GitHub Container Registry URL
                     sh 'docker build -t ghcr.io/baitoeykp/jenkins/cicd:latest .'
 

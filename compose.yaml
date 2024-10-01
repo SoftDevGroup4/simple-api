@@ -3,4 +3,4 @@ services:
     container_name: api
     image: ghcr.io/baitoeykp/jenkins/cicd:latest
     ports:
-      - "5000:5000" #out:in
+      - "5001:5000" #out:in
