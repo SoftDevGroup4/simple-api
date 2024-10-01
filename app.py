@@ -37,6 +37,16 @@ def is_prime(num):
         return "True"
     except:
         return {"error_msg": "inputs must be numbers"}
+    
+@app.route("/is_even/<num>", methods=["GET"])
+def is_even(num):
+    try:
+        num = int(num)
+        if num % 2 == 0:  
+            return "True"
+        return "False"
+    except:
+        return {"error_msg": "inputs must be numbers"}
 
 
 if __name__ == "__main__":
