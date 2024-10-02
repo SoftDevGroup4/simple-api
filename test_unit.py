@@ -4,17 +4,18 @@ import app
 
 class TestApp(unittest.TestCase):
 
-    def test_true_when_x_is_17(self):
-        response = app.is_grade(3.7)
-        self.assertEqual(response, "1st")
+    def test_x_is_1(self):
+        response = app.isodd(1)
+        self.assertEqual(response, "True")
 
-    def test_false_when_x_is_36(self):
-        response = app.is_grade(3.3)
-        self.assertEqual(response, "2nd")
+    def test_x_is_0(self):
+        response = app.isodd(0)
+        self.assertEqual(response, "False")
 
-    def test_true_when_x_is_13219(self):
-        response = app.is_grade(2.5)
-        self.assertEqual(response, "other")
+    def test_x_is_neg2(self):
+        response = app.isodd(-2)
+        self.assertEqual(response, "False")
+
 
 if __name__ == "__main__":
     unittest.main()
