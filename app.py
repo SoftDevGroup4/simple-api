@@ -37,30 +37,31 @@ def is_prime(num):
         return "True"
     except:
         return {"error_msg": "inputs must be numbers"}
-    
-@app.route("/is_even/<num>", methods=["GET"])
-def is_even(num):
+
+
+@app.route("/isodd/<num>", methods=["GET"])
+def isodd(num):
     try:
         num = int(num)
-        if num % 2 == 0:  
-            return "True"
-        return "False"
-    except:
-        return {"error_msg": "inputs must be numbers"}
-    
-@app.route("/is_grade/<num>", methods=["GET"])
-def is_grade(num):
-    try:
-        num = float(num)
-        if num>3.5:  
-            return "1st"
-        elif num>=3.25 and num<=3.5:  
-            return "2nd"
-        else:
-            return "other"
+        if num % 2 == 0:
+            return "False"
+        return "True"
     except:
         return {"error_msg": "inputs must be numbers"}
 
+
+# @app.route("/is_grade/<num>", methods=["GET"])
+# def is_grade(num):
+#     try:
+#         num = float(num)
+#         if num>3.5:
+#             return "1st"
+#         elif num>=3.25 and num<=3.5:
+#             return "2nd"
+#         else:
+#             return "other"
+#     except:
+#         return {"error_msg": "inputs must be numbers"}
 
 
 if __name__ == "__main__":
